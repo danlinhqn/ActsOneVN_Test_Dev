@@ -12,7 +12,7 @@ root$ apt install default-jre
 root$ java -version
 ```
 
-# Cách 1 ------------------------------------------------- /
+# Method 1 ------------------------------------------------- /
 
 ### Download and Install Kafka
 ```bash
@@ -61,20 +61,21 @@ root$ bin/zookeeper-server-start.sh config/zookeeper.properties
 root$ cd ~/kafka 
 root$ bin/kafka-server-start.sh config/server.properties
 
-# Cách 2 -------------------
+# Method 2 ------------------------------------------------- /
 
-Using docker image
-Get the docker image
+Using docker image, Get the docker image
 
+```bash
 $ docker pull apache/kafka:3.7.0
-Start the kafka docker container
+# Start the kafka docker container
 
 $ docker run -p 9092:9092 apache/kafka:3.7.0
-Once the Kafka server has successfully launched, you will have a basic Kafka environment running and ready to use.
+# Once the Kafka server has successfully launched, you will have a basic Kafka environment running and ready to use.
+```
 
-### Lỗi gặp phải khi làm 15.04.2024
-* Có gặp trường hợp Server Kafka bị lỗi phần log, khắc phúc bằng cách xóa thư mục log và chạy lại
-* thư mục Log tại đây: /tmp/kafka-logs
+### Troubleshoot when run Kafka 15.04.2024
+* I got error Server Kafka have problem with log, so I try remove that log and can begin run again.
+* Log Location: /tmp/kafka-logs
 
 ssh root@192.168.1.7
 cd /mnt/c/Users/ad/Desktop/AtcsOneVN_Test_Dev
