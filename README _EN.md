@@ -29,11 +29,11 @@ detete.topic.enable = true
 
 # 
 ```
-# Setup Zookeeper
+### Setup Zookeeper
 ```bash
 nano /etc/systemd/system/zookeeper.service
 ```
-# Use this Content for Setup Zookeeper
+### Use this Content for Setup Zookeeper
 ```bash
 [Unit]
 Requires=network.target remote-fs.target
