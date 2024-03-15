@@ -8,6 +8,13 @@
 sudo apt install default-jre
 java -version '''
 
+​```python
+def hello_world():
+    print("Hello, world!")
+hello_world()
+​```
+
+
 # Download and Install Kafka
 mdkir ~/Downloads
 curl "https://downloads.apache.org/kafka/2.8.0/kafka_2.13-2.8.0.tgz" -o ~/Downloads/kafka.tgz
