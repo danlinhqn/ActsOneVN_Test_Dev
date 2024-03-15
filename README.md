@@ -51,15 +51,17 @@ WantedBy=multi-user.target
 ```
 ### Begin Start Kafka
 
-systemctl start kafka
-
-### Start the ZooKeeper service in 1 Terminal
+#### Start the ZooKeeper service in 1 Terminal
+```bash
 root$ cd ~/kafka 
 root$ bin/zookeeper-server-start.sh config/zookeeper.properties
+```
 
-### Start the Kafka broker service in another Terminal
+#### Start the Kafka broker service in another Terminal
+```bash
 root$ cd ~/kafka 
 root$ bin/kafka-server-start.sh config/server.properties
+```
 
 ### After run in windown
 ![pipline ActsOne Dev](docs/Server_Test.png)
