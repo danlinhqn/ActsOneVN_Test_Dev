@@ -76,4 +76,5 @@ Once the Kafka server has successfully launched, you will have a basic Kafka env
 * Có gặp trường hợp Server Kafka bị lỗi phần log, khắc phúc bằng cách xóa thư mục log và chạy lại
 * thư mục Log tại đây: /tmp/kafka-logs
 
+ssh root@192.168.1.7
 cd /mnt/c/Users/ad/Desktop/AtcsOneVN_Test_Dev

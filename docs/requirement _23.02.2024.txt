@@ -35,7 +35,7 @@ và xử lý các đơn hàng trong cơ sở dữ liệu theo thứ tự.
 
 . Triển khai các producer của Kafka để gửi dữ liệu đơn hàng đến một chủ đề Kafka. ( Xong )
 
-. Đảm bảo hệ thống có thể xử lý một lượng lớn dữ liệu (hàng triệu đơn hàng)."
+. Đảm bảo hệ thống có thể xử lý một lượng lớn dữ liệu (hàng triệu đơn hàng)."  ( Xong )
 
 "3. Module Xử Lý Đơn Hàng:
 

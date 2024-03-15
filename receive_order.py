@@ -5,6 +5,7 @@ from common_logic import *
 from notify_client import *
 import time
 
+# Hàm nhận thông tin đặt hàng từ Client
 def receive_Order_From_Client():
     
     # Khởi tạo Kafka consumer
@@ -21,19 +22,23 @@ def receive_Order_From_Client():
     # Lặp qua các tin nhắn từ các topic
     for message in consumer:
         try:
+            # Xử lý dữ liệu ở đây, thêm các điều kiện xử lý để có thể trả về thông tin cụ thể
+            order_Need_Processing = (json.loads(message.value.decode('utf-8')))
+            
             # Kiểm tra nếu topic là "Clothing", sẽ có discount 30%
             if message.topic == "Clothing":
                 print("Clothing have Discount 30%:", message.topic)
+                order_Need_Processing["Discount"] = "30%"
+                order_Need_Processing["Type"] = "Clothing"
                 
             # Kiểm tra nếu topic là "Cosmetics", sẽ có discount 5%
             if message.topic == "Cosmetics":
                 print("Cosmetics have Discount 5%:", message.topic)
-                
-            # Xử lý dữ liệu ở đây, thêm các điều kiện xử lý để có thể trả về thông tin cụ thể
-            order_Need_Processing = (json.loads(message.value.decode('utf-8')))
+                order_Need_Processing["Discount"] = "5%"
+                order_Need_Processing["Type"] = "Cosmetics"
             
+            # Lưu thông tin đơn hàng vào database
             order_Data_Got = order_Need_Processing
-        
             database_Save = os.path.join(os.path.dirname(__file__), 'database.json')
             check_And_Append_Database(order_Data_Got, database_Save)
             
@@ -51,6 +56,7 @@ def receive_Order_From_Client():
     # Đóng consumer
     consumer.close()
     
+    print("$ ---------------------------------- $")
     print("Wait for new order...")
 
 # Hàm chạy chương trình

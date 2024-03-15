@@ -7,6 +7,7 @@ from data_global import *
 # Hàm gửi thông báo từ Shop đến Client
 def sent_Notify_From_Shop_To_Client():
     
+    #time.sleep(3) # Đợi 3 giây để gửi thông báo xong
     # Topic mới
     topic_name = "notify"
 
@@ -29,9 +30,6 @@ def sent_Notify_From_Shop_To_Client():
     producer.send(topic_name, json_data.encode('utf-8'))
     # Flush dữ liệu
     producer.flush()
-    
-    time.sleep(2) # Đợi 5 giây để gửi thông báo xong
-    
     print("Sent Notify to the Client successfully!")
     
 # Hàm nhận thông báo từ Shop
