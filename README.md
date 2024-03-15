@@ -1,5 +1,5 @@
 ### Basic Mechanism of Kafka
-![Text Description](Kafka.png)
+![Text Description](docs/Kafka.png)
 
 ### Setup Kafka on Ubuntu 
 * Can use Ubuntu 20.04 LTS for base
