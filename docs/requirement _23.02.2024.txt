@@ -43,4 +43,4 @@ và xử lý các đơn hàng trong cơ sở dữ liệu theo thứ tự.
 
 . Các đơn hàng nên được xử lý và lưu trữ trong cơ sở dữ liệu theo thứ tự. ( Xong )
 
-. Đảm bảo xử lý đáng tin cậy (xử lý sự cố, thử lại)." 
+. Đảm bảo xử lý đáng tin cậy (xử lý sự cố, thử lại)."  ( Xong )

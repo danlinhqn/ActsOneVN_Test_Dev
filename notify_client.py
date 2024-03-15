@@ -4,7 +4,7 @@ from kafka import KafkaConsumer
 import json
 from data_global import *
 
-
+# Hàm gửi thông báo từ Shop đến Client
 def sent_Notify_From_Shop_To_Client():
     
     # Topic mới
@@ -16,10 +16,13 @@ def sent_Notify_From_Shop_To_Client():
     )
 
     # Tại đây sẽ có 2 trường hợp khách hàng đặt hàng thành công và không thành công
-    if notify_for_client[0] == 1:
-        data = {"The order has been successfully confirmed and is on its way for delivery."} 
+    if notify_For_Client[0] == 1:
+
+        notify_Message = "The order has been successfully confirmed and is on its way for delivery."
+        data = {"Notify Message:": notify_Message} 
     else: 
-        data = {"The order has not been confirmed, please try again."}
+        notify_Message = "The order has not been confirmed, please try again."
+        data = {"Notify Message:": notify_Message} 
 
     json_data = json.dumps(data)
     # Gửi dữ liệu đến topic "notify"
@@ -27,28 +30,36 @@ def sent_Notify_From_Shop_To_Client():
     # Flush dữ liệu
     producer.flush()
     
-
+    time.sleep(2) # Đợi 5 giây để gửi thông báo xong
+    
+    print("Sent Notify to the Client successfully!")
+    
+# Hàm nhận thông báo từ Shop
 def receive_Notify_From_Shop_To_Client():
-    # Topic to subscribe to
-    topic_name = "notify"
-
+    
+    print("Waiting for notification from the Shop ...")
+    
     # KafkaConsumer declaration with the "notify" topic
     consumer = KafkaConsumer(
-        topic_name,
+        "notify",
         bootstrap_servers=config.kafka_ip,
         auto_offset_reset="earliest",
         group_id="notify-group"
     )
 
     # Process messages received from the "notify" topic
-    for message in consumer:
-        message_data = json.loads(message.value.decode('utf-8'))
-        print("Notification received:", message_data)
+    for message_Notify in consumer:
+        try:
+            message_data = json.loads(message_Notify.value.decode('utf-8'))
+            notify_message = message_data['Notify Message:']
+            print("Notification received:", notify_message)
 
-    # Close the consumer
-    consumer.close()
-
-
-sent_Notify_From_Shop_To_Client()
-
-receive_Notify_From_Shop_To_Client()
+        except Exception as e:
+            # Xử lý bất kỳ lỗi nào nếu có
+            print(f"Error while processing order: {str(e)}")
+        
+        finally:
+            # Xóa thông tin đã nhận được, sau khi đã xử lý xong
+            consumer.commit()
+            consumer.close()
+                

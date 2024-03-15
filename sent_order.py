@@ -1,6 +1,7 @@
 import config
 from kafka import KafkaProducer
 import json
+from notify_client import *
 
 # Danh sách các topic tùy chọn
 valid_topics = ["Clothing", "Cosmetics"]
@@ -48,3 +49,4 @@ producer.flush()
 print("Order sent!, please wait for the confirmation from the Shop ...")
 
 # Tại đây sẽ chạy file nhận thông báo từ Shop
+receive_Notify_From_Shop_To_Client()

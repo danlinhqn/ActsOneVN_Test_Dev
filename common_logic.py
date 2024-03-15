@@ -23,10 +23,10 @@ def check_And_Append_Database(order_Data, database_File):
             json.dump(database, file, indent=4) 
             
         # Đặt hàng thành công
-        notify_for_client.insert(0,1)
+        notify_For_Client.insert(0,1)
         print("Data imported successfully.")
     else:
         
         # Đặt hàng không thành công
-        notify_for_client.insert(0,2)
+        notify_For_Client.insert(0,2)
         print("Data already exists in the database.")
