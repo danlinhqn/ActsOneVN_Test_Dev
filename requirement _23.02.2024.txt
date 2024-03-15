@@ -27,17 +27,20 @@ và xử lý các đơn hàng trong cơ sở dữ liệu theo thứ tự.
 
 "1. Module Nhận Đơn Hàng:
 
-. Phải nhận dữ liệu đơn hàng theo thời gian thực.
-. Nên gửi lại xác nhận cho người gửi khi đơn hàng được nhận."
+. Phải nhận dữ liệu đơn hàng theo thời gian thực. ( Xong )
+
+. Nên gửi lại xác nhận cho người gửi khi đơn hàng được nhận." ( Xong )
 
 "2. Tích hợp Hàng Đợi Tin Nhắn (Apache Kafka):
 
-. Triển khai các producer của Kafka để gửi dữ liệu đơn hàng đến một chủ đề Kafka.
+. Triển khai các producer của Kafka để gửi dữ liệu đơn hàng đến một chủ đề Kafka. ( Xong )
 
 . Đảm bảo hệ thống có thể xử lý một lượng lớn dữ liệu (hàng triệu đơn hàng)."
 
 "3. Module Xử Lý Đơn Hàng:
 
-. Phát triển các consumer của Kafka để xử lý các đơn hàng từ chủ đề Kafka.
-. Các đơn hàng nên được xử lý và lưu trữ trong cơ sở dữ liệu theo thứ tự.
-. Đảm bảo xử lý đáng tin cậy (xử lý sự cố, thử lại)."
+. Phát triển các consumer của Kafka để xử lý các đơn hàng từ chủ đề Kafka. ( Xong )
+
+. Các đơn hàng nên được xử lý và lưu trữ trong cơ sở dữ liệu theo thứ tự. ( Xong )
+
+. Đảm bảo xử lý đáng tin cậy (xử lý sự cố, thử lại)." 

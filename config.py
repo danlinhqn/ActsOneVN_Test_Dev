@@ -1,1 +1,1 @@
-kafka_ip ="192.168.1.7:9092"
+kafka_ip ="localhost:9092" # Tại đây khai báo địa chỉ IP của Kafka
