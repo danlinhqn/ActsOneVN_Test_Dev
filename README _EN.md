@@ -4,16 +4,10 @@
 # Setup Kafka on Ubuntu 
 * Can use Ubuntu 20.04 LTS for base
 * Install Java
-''' sudo apt update
+
+sudo apt update
 sudo apt install default-jre
-java -version '''
-
-​```python
-def hello_world():
-    print("Hello, world!")
-hello_world()
-​```
-
+java -version
 
 # Download and Install Kafka
 mdkir ~/Downloads
