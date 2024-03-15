@@ -29,8 +29,10 @@ for message in consumer:
         order_Need_Processing = (json.loads(message.value.decode('utf-8')))
         
         order_Data_Got = order_Need_Processing
+      
         database_Save = os.path.join(os.path.dirname(__file__), 'database.json')
-        
+        check_And_Append_Database(order_Data_Got, database_Save)
+
     except Exception as e:
         # Xử lý bất kỳ lỗi nào nếu có
         print(f"Error while processing order: {str(e)}")

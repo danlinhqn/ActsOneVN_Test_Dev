@@ -1,5 +1,6 @@
 import json
 import os
+from data_global import *
 
 def check_And_Append_Database(order_Data, database_File):
     try:
@@ -20,12 +21,12 @@ def check_And_Append_Database(order_Data, database_File):
             
             # Sử dụng indent=4 để ghi dữ liệu vào file theo định dạng đẹp
             json.dump(database, file, indent=4) 
+            
+        # Đặt hàng thành công
+        notify_for_client.insert(0,1)
         print("Data imported successfully.")
     else:
+        
+        # Đặt hàng không thành công
+        notify_for_client.insert(0,2)
         print("Data already exists in the database.")
-
-# # Thử nghiệm hàm
-# order_Data_Got = {"T-Shirt": "Moi son", "Client": "Linh", "Age": 30}
-# database_Save = os.path.join(os.path.dirname(__file__), 'database.json')
-
-# check_And_Append_Database(order_Data_Got, database_Save)

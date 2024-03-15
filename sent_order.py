@@ -44,4 +44,7 @@ producer.send(topic_name, json_data.encode('utf-8'))
 # Flush dữ liệu
 producer.flush()
 
-print("Order Successfully Sent!")
+# Thông báo ngay khi đặt hàng xong bước 1
+print("Order sent!, please wait for the confirmation from the Shop ...")
+
+# Tại đây sẽ chạy file nhận thông báo từ Shop
