@@ -23,11 +23,9 @@ root$ tar -xvzf ~/Downloads/kafka.tgz --strip 1
 nano ~/kafka/config/server.properties
 # Add this line in the end of the file, for can delete topic
 detete.topic.enable = true
-# Also remove comment in this line " listeners=PLAINTEXT://0.0.0.0:9092 "
-# And remove comment in this line " advertised.listeners=PLAINTEXT://your.host:9092 "
+# remove comment in this line "listeners=PLAINTEXT://:9092" to "listeners=PLAINTEXT://localhost:9092"
+# remove comment in this line "advertised.listeners=PLAINTEXT://your.host:9092"  to "advertised.listeners=PLAINTEXT://localhost:9092"  
 # Also can check the line have : "log.dirs=/tmp/kafka-logs" and can change the location for save Logs
-
-# 
 ```
 ### Setup Zookeeper
 ```bash
@@ -49,3 +47,14 @@ Restart=on-abnormal
 [Install]
 WantedBy=multi-user.target
 ```
+### Begin Start Kafka
+
+systemctl start kafka
+
+# Start the ZooKeeper service in 1 Terminal
+root$ cd ~/kafka 
+root$ bin/zookeeper-server-start.sh config/zookeeper.properties
+
+# Start the Kafka broker service in another Terminal
+root$ cd ~/kafka 
+root$ bin/kafka-server-start.sh config/server.properties
