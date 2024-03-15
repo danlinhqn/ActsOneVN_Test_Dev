@@ -1,5 +1,5 @@
 ### Basic Mechanism of Kafka
-![Text Description](docs/Kafka.png)
+![Kafka Description](docs/Kafka.png)
 
 ### Setup Kafka on Ubuntu 
 * Can use Ubuntu 20.04 LTS for base
@@ -12,7 +12,7 @@ root$ apt install default-jre
 root$ java -version
 ```
 
-# Method 1 ------------------------------------------------- /
+## Method 1 ------------------------------------------------- /
 
 ### Download and Install Kafka
 ```bash
@@ -53,15 +53,15 @@ WantedBy=multi-user.target
 
 systemctl start kafka
 
-# Start the ZooKeeper service in 1 Terminal
+### Start the ZooKeeper service in 1 Terminal
 root$ cd ~/kafka 
 root$ bin/zookeeper-server-start.sh config/zookeeper.properties
 
-# Start the Kafka broker service in another Terminal
+### Start the Kafka broker service in another Terminal
 root$ cd ~/kafka 
 root$ bin/kafka-server-start.sh config/server.properties
 
-# Method 2 ------------------------------------------------- /
+## Method 2 ------------------------------------------------- /
 
 Using docker image, Get the docker image
 
@@ -77,5 +77,11 @@ $ docker run -p 9092:9092 apache/kafka:3.7.0
 * I got error Server Kafka have problem with log, so I try remove that log and can begin run again.
 * Log Location: /tmp/kafka-logs
 
+* Command for open project in Ubuntu localhost
+```bash
 ssh root@192.168.1.7
 cd /mnt/c/Users/ad/Desktop/AtcsOneVN_Test_Dev
+```
+
+## The Test Dev Project, Operates As Follows: ------------------------------------------------- /
+![pipline ActsOne Dev](docs/pipline_ActsOne_Dev.png)
