@@ -1,5 +1,4 @@
-### Tìm hiểu về Kafka cơ bản
-* Có thể xem tại file này " Cơ Chế Cở Bản Kafka.png "
+### Basic Mechanism of Kafka
 ![Text Description](Kafka.png)
 
 ### Setup Kafka on Ubuntu 
