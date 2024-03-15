@@ -1,5 +1,5 @@
 ### Research basic for Kafka
-![Kafka Description](docs/Kafka_Research.png)
+![Kafka Description](docs/KafkaResearch.png)
 
 ### Setup Kafka on Ubuntu 
 * Can use Ubuntu 20.04 LTS for base
