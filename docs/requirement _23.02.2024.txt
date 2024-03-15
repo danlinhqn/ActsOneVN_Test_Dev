@@ -4,43 +4,18 @@ confirm receipt to the sender application, and process the orders in the databas
 
 "1. Order Receiving Module:
 
-. Must receive order data in real time.
-. Should send a confirmation back to the sender once the order is received."	
+. Must receive order data in real time. (Done)
+. Should send a confirmation back to the sender once the order is received." (Done)
 "2. Messaging Queue Integration (Apache Kafka):
 
-. Implement Kafka producers to send order data to a Kafka topic.
+. Implement Kafka producers to send order data to a Kafka topic. (Done)
 
-. Ensure the system can handle high throughput (millions of orders)."	
+. Ensure the system can handle high throughput (millions of orders)."	(Run more for this file receive_order.py)
 
 "3. Order Processing Module:
 
-. Develop Kafka consumers to process orders from the Kafka topic.
-. Orders should be processed and stored in the database sequentially.
-. Ensure reliable processing (handling of failures, retries)."	
+. Develop Kafka consumers to process orders from the Kafka topic. (Done)
+. Orders should be processed and stored in the database sequentially. (Done)
+. Ensure reliable processing (handling of failures, retries)."(Done)
 
 // ---------------------------------------------------------------------- /
-
-Mục tiêu: Phát triển một hệ thống xử lý đơn hàng bất đồng bộ để xử lý dữ liệu đơn hàng theo thời gian thực một cách hiệu quả.
-
-Phạm vi: Hệ thống cần có khả năng nhận hàng triệu đơn hàng theo thời gian thực, xác nhận việc nhận đơn đến ứng dụng gửi, 
-và xử lý các đơn hàng trong cơ sở dữ liệu theo thứ tự.
-
-"1. Module Nhận Đơn Hàng:
-
-. Phải nhận dữ liệu đơn hàng theo thời gian thực. ( Xong )
-
-. Nên gửi lại xác nhận cho người gửi khi đơn hàng được nhận." ( Xong )
-
-"2. Tích hợp Hàng Đợi Tin Nhắn (Apache Kafka):
-
-. Triển khai các producer của Kafka để gửi dữ liệu đơn hàng đến một chủ đề Kafka. ( Xong )
-
-. Đảm bảo hệ thống có thể xử lý một lượng lớn dữ liệu (hàng triệu đơn hàng)."  ( Xong )
-
-"3. Module Xử Lý Đơn Hàng:
-
-. Phát triển các consumer của Kafka để xử lý các đơn hàng từ chủ đề Kafka. ( Xong )
-
-. Các đơn hàng nên được xử lý và lưu trữ trong cơ sở dữ liệu theo thứ tự. ( Xong )
-
-. Đảm bảo xử lý đáng tin cậy (xử lý sự cố, thử lại)."  ( Xong )
