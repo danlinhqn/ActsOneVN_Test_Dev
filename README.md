@@ -1,5 +1,5 @@
-### Basic Mechanism of Kafka
-![Kafka Description](docs/Kafka.png)
+### Research basic for Kafka
+![Kafka Description](docs/Kafka_Research.png)
 
 ### Setup Kafka on Ubuntu 
 * Can use Ubuntu 20.04 LTS for base
@@ -12,7 +12,7 @@ root$ apt install default-jre
 root$ java -version
 ```
 ------
-## Method 1
+## Method 1 - Setup Kafka
 
 ### Download and Install Kafka
 ```bash
@@ -61,8 +61,11 @@ root$ bin/zookeeper-server-start.sh config/zookeeper.properties
 root$ cd ~/kafka 
 root$ bin/kafka-server-start.sh config/server.properties
 
+### After run in windown
+![pipline ActsOne Dev](docs/Server_Test.png)
+
 ------
-## Method 2 
+## Method 2 - Setup Kafka
 
 Using docker image, Get the docker image
 
@@ -84,5 +87,5 @@ ssh root@192.168.1.7
 cd /mnt/c/Users/ad/Desktop/AtcsOneVN_Test_Dev
 ```
 ------
-## The Test Dev Project, Operates As Follows: 
+### The Test Dev Project, Operates As Follows: 
 ![pipline ActsOne Dev](docs/pipline_ActsOne_Dev.png)
