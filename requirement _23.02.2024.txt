@@ -1,6 +1,7 @@
 Objective: Develop an asynchronous order processing system to handle real-time order data efficiently.	
 Scope: The system should be able to receive millions of orders in real time, 
 confirm receipt to the sender application, and process the orders in the database sequentially.	
+
 "1. Order Receiving Module:
 
 . Must receive order data in real time.
@@ -8,14 +9,16 @@ confirm receipt to the sender application, and process the orders in the databas
 "2. Messaging Queue Integration (Apache Kafka):
 
 . Implement Kafka producers to send order data to a Kafka topic.
+
 . Ensure the system can handle high throughput (millions of orders)."	
+
 "3. Order Processing Module:
 
 . Develop Kafka consumers to process orders from the Kafka topic.
 . Orders should be processed and stored in the database sequentially.
 . Ensure reliable processing (handling of failures, retries)."	
 
-// 
+// ---------------------------------------------------------------------- /
 
 Mục tiêu: Phát triển một hệ thống xử lý đơn hàng bất đồng bộ để xử lý dữ liệu đơn hàng theo thời gian thực một cách hiệu quả.
 
@@ -30,6 +33,7 @@ và xử lý các đơn hàng trong cơ sở dữ liệu theo thứ tự.
 "2. Tích hợp Hàng Đợi Tin Nhắn (Apache Kafka):
 
 . Triển khai các producer của Kafka để gửi dữ liệu đơn hàng đến một chủ đề Kafka.
+
 . Đảm bảo hệ thống có thể xử lý một lượng lớn dữ liệu (hàng triệu đơn hàng)."
 
 "3. Module Xử Lý Đơn Hàng:

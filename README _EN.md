@@ -1,8 +1,12 @@
-# Can use Ubuntu 20.04 LTS for base
-# Install Java
-sudo apt update
+# Tìm hiểu về Kafka cơ bản
+* Có thể xem tại file này " Cơ Chế Cở Bản Kafka.png "
+
+# Setup Kafka on Ubuntu 
+* Can use Ubuntu 20.04 LTS for base
+* Install Java
+''' sudo apt update
 sudo apt install default-jre
-java -version
+java -version '''
 
 # Download and Install Kafka
 mdkir ~/Downloads
