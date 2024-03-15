@@ -94,3 +94,7 @@ cd /mnt/c/Users/ad/Desktop/AtcsOneVN_Test_Dev
 
 ### Video run Demo
 [Play Video: Kafka Test Run Demo](https://drive.google.com/file/d/1IkuDZoi4tQFiqwCPQTIvGsfNMedxD09G/view?usp=drive_link)
+
+### Ensure the system can handle high throughput (millions of orders)."	
+
+* Can run consumer more in this receive_order.py
