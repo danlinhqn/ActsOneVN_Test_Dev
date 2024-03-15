@@ -1,6 +1,6 @@
 ### Tìm hiểu về Kafka cơ bản
 * Có thể xem tại file này " Cơ Chế Cở Bản Kafka.png "
-![Text Description](Cơ Chế Cở Bản Kafka.drawio.png)
+![Text Description](Kafka.png)
 
 ### Setup Kafka on Ubuntu 
 * Can use Ubuntu 20.04 LTS for base
