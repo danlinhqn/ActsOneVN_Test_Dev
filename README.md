@@ -82,6 +82,6 @@ $ docker run -p 9092:9092 apache/kafka:3.7.0
 ssh root@192.168.1.7
 cd /mnt/c/Users/ad/Desktop/AtcsOneVN_Test_Dev
 ```
-
-## The Test Dev Project, Operates As Follows: ------------------------------------------------- /
+-----------
+## The Test Dev Project, Operates As Follows: 
 ![pipline ActsOne Dev](docs/pipline_ActsOne_Dev.png)
