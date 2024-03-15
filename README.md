@@ -92,9 +92,9 @@ cd /mnt/c/Users/ad/Desktop/AtcsOneVN_Test_Dev
 ### The Test Dev Project, Operates As Follows: 
 ![pipline ActsOne Dev](docs/pipline_ActsOne_Dev.png)
 
+### Ensure the system can handle high throughput (millions of orders)."	
+* Can run consumer more in this receive_order.py
+
 ### Video run Demo
 [Play Video: Kafka Test Run Demo](https://drive.google.com/file/d/1IkuDZoi4tQFiqwCPQTIvGsfNMedxD09G/view?usp=drive_link)
 
-### Ensure the system can handle high throughput (millions of orders)."	
-
-* Can run consumer more in this receive_order.py
